@@ -1,28 +1,77 @@
+@font-face {
+  font-family: 'Gotham Light';
+  src: url('../fonts/GothamSSm-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Light.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/GothamSSm-Light.woff') format('woff'),
+       url('../fonts/GothamSSm-Light.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/GothamSSm-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamSSm-Medium.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/GothamSSm-Medium.woff') format('woff'),
+       url('../fonts/GothamSSm-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url('../fonts/Gotham-Thin.otf') format('opentype'),
+       url('../fonts/Gotham-Thin.ttf')  format('truetype');
+}
+.main-content {
+  font-family: 'Gotham Light';
+  margin-top: 150px;
+}
 
 body {
   font-size: 14px;
 }
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', 'Varela Round', helvetica, sans-serif;
+  font-family: 'Gotham','Montserrat', 'Varela Round', helvetica, sans-serif;
+  font-weight: normal;
 }
 .btn {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
 }
 .container {
-  max-width: 920px;
+  max-width: 1100px;
 }
 .navbar {
   background: transparent;
   padding: 0.3em 0;
+  margin: 20px 0;
   border: 0;
-  font-family: 'Varela Round', helvetica, sans-serif;
+  font-family: 'Gotham','Varela Round', helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .navbar .navbar-brand {
   color: #fff;
-  font-weight: bold;
+  font-weight: 200;
+  font-family: 'Gotham Light';
   font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
+
+.full-size {
+  text-transform: uppercase;
+  font-size: 60pt;
+  font-weight: 100;
+  font-family: 'Gotham Thin', 'Gotham Light';
+  line-height: 80pt;
+}
+
+.full-size strong { /* 2px solid #f2e244 */
+  border-bottom: 2px solid #f2e244;
+}
+
+.navbar-right {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
 .navbar ul.nav li a {
   color: #fff;
   padding-left: 0;
@@ -37,11 +86,12 @@ body, h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding: 2em 0 9em;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .jumbotron h1 {
   font-size: 3em;
   font-weight: normal;
-  font-family: 'Changa one';
 }
 .jumbotron h2 {
   font-size: 1.2em;
@@ -73,23 +123,34 @@ body, h1, h2, h3, h4, h5, h6 {
   margin: 0.3em 0;
 }
 .benefit {
-  margin: 0.8em 0;
+  margin: 60px 0;
   text-align: center;
 }
+
+.benefit h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.benefit p, .sizable {
+  font-size: 18px;
+  font-family: 'Gotham Light', sans-serif;
+}
+
+.sizable a {
+  color: inherit;
+}
+
 .benefit .benefit-ball {
-  background: #428bca;
-  border-radius: 50%;
   color: #fff;
   display: inline-block;
   line-height: 1em;
-  padding: 3em;
+  padding: 0;
 }
-.benefit .benefit-ball .glyphicon {
-  font-size: 4em;
-  position: relative;
-  top: -3px;
-  right: 1px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+.benefit .benefit-ball i {
+  font-size: 30pt;
+  text-align: center;
+  color: #aaa;
 }
 .benefit h3 {
   color: #000;
@@ -153,7 +214,7 @@ footer {
 
 #canvas-container {
   overflow: hidden;
-  height: 500px;
+  height: 700px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -170,18 +231,51 @@ footer {
 }
 
 .call-to-action, .jumbotron .btn {
-  padding: 15px 20px;
   margin: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: 200;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid #f2e244;
+  background: rgba(0,0,0,0.4);
+  border: 2px solid #f2e244;
   border-radius: 0px;
-  color: #f2e244;
+  padding: 20px 60px;
 }
 
 .call-to-action.btn-default {
-  color: #ffa73a;
-  border: 1px solid #ffa73a;
+  color: white;
+  border: 2px solid #ffa73a;
+}
+
+.call-to-action:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.call-to-demo:hover {
+  background: inherit;
+  color: inherit;
+  border: 2px solid #333;
+}
+
+.header-titles {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.header-secondary {
+  text-align: center;
+}
+
+.call-to-demo {
+  margin: 80px auto;
+  font-size: 24px;
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 30px 80px;
+}
+
+.brand-logo {
+  position: relative;
+  top: -4px;
+  margin-right: 10px;
 }

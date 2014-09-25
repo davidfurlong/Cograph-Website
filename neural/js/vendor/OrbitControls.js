@@ -65,7 +65,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 	this.maxPolarAngle = Math.PI; // radians
 
 	// Set to true to disable use of the keys
-	this.noKeys = false;
+	this.noKeys = true;
 
 	// The four arrow keys
 	this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
@@ -164,7 +164,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 		// get Y column of matrix
 		panOffset.set( te[ 4 ], te[ 5 ], te[ 6 ] );
 		panOffset.multiplyScalar( distance );
-		
 		pan.add( panOffset );
 
 	};
@@ -279,10 +278,10 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 		this.object.lookAt( this.target );
 
-		thetaDelta = 100;
+		thetaDelta = 1100;
 		phiDelta = 100;
 		scale = 0.2;
-		pan.set( 0, 0, 0 );
+		pan.set( 10, 20, 0 );
 
 		if ( lastPosition.distanceToSquared( this.object.position ) > EPS ) {
 

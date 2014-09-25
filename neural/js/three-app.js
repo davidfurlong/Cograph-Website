@@ -301,7 +301,7 @@
 			this.neuronSize = 0.7;
 			this.spriteTextureNeuron = THREE.ImageUtils.loadTexture( "neural/sprites/electric.png" );
 			this.neuronColor = 0x00ffff;
-			this.neuronOpacity = 1.0;
+			this.neuronOpacity = 0.5;
 			this.neuronsGeom = new THREE.Geometry();
 			this.neuronMaterial = new THREE.PointCloudMaterial({
 				map: this.spriteTextureNeuron,
@@ -568,6 +568,7 @@
 		cameraCtrl = new THREE.OrbitControls(camera, container);
 		cameraCtrl.object.position.y = 150;
 		cameraCtrl.update();
+		window.cameraCtrl = cameraCtrl;
 
 		// ---- renderer
 		renderer = new THREE.WebGLRenderer({antialias: true , alpha: false});
