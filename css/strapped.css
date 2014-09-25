@@ -256,6 +256,18 @@ footer {
   border: 2px solid #333;
 }
 
+footer {
+  background: #f2e244;
+  font-size: 20px;
+  text-shadow: 0px 0px 2px #BFAF11;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}
+
 .header-titles {
   text-align: center;
   margin: 80px 0;
