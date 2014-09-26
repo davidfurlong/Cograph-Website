@@ -30,6 +30,9 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Gotham','Montserrat', 'Varela Round', helvetica, sans-serif;
   font-weight: normal;
 }
+#top h1 {
+  font-family: 'Gotham Light';
+}
 .btn {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
@@ -57,7 +60,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .full-size {
   text-transform: uppercase;
-  font-size: 60pt;
+  font-size: 40pt;
   font-weight: 100;
   font-family: 'Gotham Thin', 'Gotham Light';
   line-height: 80pt;
@@ -130,6 +133,7 @@ body, h1, h2, h3, h4, h5, h6 {
 .benefit h3 {
   text-transform: uppercase;
   font-size: 20px;
+  font-family: 'Gotham Thin', sans-serif;
 }
 
 .benefit p, .sizable {
@@ -150,7 +154,8 @@ body, h1, h2, h3, h4, h5, h6 {
 .benefit .benefit-ball i {
   font-size: 30pt;
   text-align: center;
-  color: #aaa;
+  color: #ddd;
+  vertical-align: bottom;
 }
 .benefit h3 {
   color: #000;
@@ -244,22 +249,24 @@ footer {
 .call-to-action.btn-default {
   color: white;
   border: 2px solid #ffa73a;
+
 }
 
 .call-to-action:hover {
-  background: rgba(0,0,0,0.6);
+  
 }
 
 .call-to-demo:hover {
   background: inherit;
   color: inherit;
-  border: 2px solid #333;
+  border: 1px solid #333;
 }
 
 footer {
   background: #f2e244;
   font-size: 20px;
-  text-shadow: 0px 0px 2px #BFAF11;
+  text-shadow: 0px 0px 2px #555;
+  border-top: 1px solid #ccc;
 }
 
 footer a:hover {
@@ -281,9 +288,11 @@ footer a:hover {
   margin: 80px auto;
   font-size: 24px;
   background: transparent;
-  border: 2px solid black;
+  border: 1px solid black;
   color: black;
   padding: 30px 80px;
+  text-transform: uppercase;
+  font-family: 'Gotham Thin', sans-serif;
 }
 
 .brand-logo {
